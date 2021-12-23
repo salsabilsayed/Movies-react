@@ -1,0 +1,15 @@
+.inputContainer{
+    width:90%;
+}
+
+@media screen and (min-width:768px) {
+    .inputContainer{
+        width:70%;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .inputContainer{
+        width:50%;
+    }
+}

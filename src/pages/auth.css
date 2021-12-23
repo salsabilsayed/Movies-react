@@ -1,0 +1,43 @@
+.title {
+  font-family: "Courgette", cursive;
+  color: rgb(236, 179, 101);
+}
+
+.auth {
+  min-height: 100vh;
+  background-image: linear-gradient(rgb(4, 28, 50), rgb(236, 179, 101));
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerForm {
+  width: 90%;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: rgba(4, 28, 50, 0.7);
+  box-shadow: 0 5px 8px 4px rgba(4, 28, 50, 0.4);
+}
+
+.button {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  background-color: rgb(236, 179, 101);
+}
+
+@media screen and (min-width: 768px) {
+  .containerForm {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .containerForm {
+    width: 30%;
+  }
+}
