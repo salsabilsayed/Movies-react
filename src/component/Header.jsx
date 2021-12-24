@@ -12,10 +12,15 @@ const Header = () => {
   let navigate = useNavigate();
 
   const logOutHandler = () =>{
-    const config = {
-      headers: { Authorization: `Bearer ${authCtx.token}` }
-  };
-    axios.delete('https://task-app-nodee.herokuapp.com/logout',config)
+
+    axios.interceptors.request.use(function (config) {
+
+      config.headers.Authorization =  `Bearer ${authCtx.token}`;
+  
+      return config;
+  });
+    
+    axios.delete('https://task-app-nodee.herokuapp.com/logout')
     .then(res =>{
       localStorage.removeItem('token')
       authCtx.logout();
