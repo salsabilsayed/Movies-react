@@ -4,9 +4,12 @@ import Error from './Error';
 
 import './Input.css'
 
-const Input = ({setMovieName,movieName,error}) => {
+const Input = ({setMovieName,movieName,error,setError}) => {
 
   const searchHandler = (e)=>{
+    if(!e.target.value){
+      setError('Please enter a movie name!')
+    }
     setMovieName(e.target.value)
   }
 

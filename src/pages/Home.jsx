@@ -33,7 +33,7 @@ const Home = () => {
   return (
     <section className="home">
       <Title />
-      <Input setMovieName={setMovieName} movieName={movieName} error={error} />
+      <Input setMovieName={setMovieName} movieName={movieName} error={error} setError={setError} />
       {!error && <MoviesList data={data} />}
     </section>
   );
