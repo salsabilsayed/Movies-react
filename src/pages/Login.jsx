@@ -26,7 +26,6 @@ const Login = () => {
       const onSubmit = (values) => {
         axios.post('https://task-app-nodee.herokuapp.com/users/login',values)
         .then(res=>{
-          console.log(res.data);
           const token = res.data.token;
           localStorage.setItem('token',token);
           authContext.login(token);
