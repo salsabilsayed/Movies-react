@@ -18,9 +18,9 @@ function App() {
     <Header />
       <Routes>
         {authCtx.isLoggedIn && <Route path="/" element={<Home />} />}
-        <Route path="signup" element={<SignUp />} />
+        {!authCtx.isLoggedIn && <Route path="signup" element={<SignUp />} />}
         
-        <Route path="login" element={<Login />} />
+        {!authCtx.isLoggedIn && <Route path="login" element={<Login />} />}
         <Route path="*" element={<Navigate to="login" />} /> 
         
       </Routes>
